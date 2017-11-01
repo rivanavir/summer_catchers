@@ -6,6 +6,6 @@ $(document).ready(function () {
   });
 
   $("body").niceScroll({
-    scrollspeed: 200,
+    scrollspeed: 100,
   });
 });
