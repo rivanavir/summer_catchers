@@ -126,6 +126,9 @@ header.header{
           li{
             padding: 0 20px;
             align-self:center;
+            @media(max-width:576px){
+              padding: 0 5px;
+            }
             a{
               display: inline-block;
               img{
@@ -550,4 +553,8 @@ section.contact-wrap{
       right: -35px;
     }
   }
+}
+
+div#ascrail2000.nicescroll-rails.nicescroll-rails-vr{
+  z-index: -1 !important;
 }
