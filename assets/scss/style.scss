@@ -251,22 +251,45 @@ section.video-wrap{
     padding: 40px 90px 90px;
     @media(max-width:992px){
       background-size:cover;
-      padding: 20px 15px 50px;
+      padding: 20px 30px 50px;
     }
     @media(max-width:768px){
+      padding: 20px;
+    }
+    @media(max-width:578px){
       padding: 20px 15px;
     }
     >.row{
-      margin-right: -10px;
-      margin-left: -10px;
-      @media(min-width: 961px){
-        margin-right: -37px;
-        margin-left: -37px;
-          >[class^=col-]{
-            padding-right: 37px;
-            padding-left: 37px;
-          }
+      margin-right: -37px;
+      margin-left: -37px;
+      @media(min-width: 993px){
+        >[class^=col-]{
+          padding-right: 37px;
+          padding-left: 37px;
         }
+      }
+      @media(max-width: 992px){
+        margin-right: -25px;
+        margin-left: -25px;
+        >[class^=col-]{
+          padding-right: 30px;
+          padding-left: 30px;
+        }
+      }
+      @media(max-width: 768px){
+        >[class^=col-]{
+          padding-right: 35px;
+          padding-left: 35px;
+        }
+      }
+      @media(max-width: 576px){
+        margin-right: -10px;
+        margin-left: -10px;
+        >[class^=col-]{
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
     }
     .video-block-border{
       // background-size: 100%;
@@ -295,6 +318,12 @@ section.video-wrap{
         background:url('../images/video-border-bg-left.png') top left no-repeat;
         background-size: contain;
         @media(max-width: 992px){
+          left: -32px;
+        }
+        @media(max-width: 768px){
+          left: -28px;
+        }
+        @media(max-width: 576px){
           left: -18px;
         }
       }
@@ -303,6 +332,12 @@ section.video-wrap{
         background: url('../images/video-border-bg-right.png') top right no-repeat;
         background-size: contain;
         @media(max-width: 992px){
+          right: -32px;
+        }
+        @media(max-width: 768px){
+          right: -28px;
+        }
+        @media(max-width: 576px){
           right: -18px;
         }
       }
