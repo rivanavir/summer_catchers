@@ -47,7 +47,7 @@ header.header{
   overflow:hidden;
   height: 100vh;
   @media (max-width: 992px) and (orientation:landscape){
-    height: 150vw;
+    height: 150vh;
   }
 
   .video-wrapper{
@@ -204,6 +204,10 @@ header.header{
     }
     @media(max-width:768px){
       max-width:300%;
+      transform:translate(-70%, -60%);
+    }
+    @media (max-width: 992px) and (orientation:landscape){
+      max-width: 176%;
     }
     @media(max-width:576px){
     }
