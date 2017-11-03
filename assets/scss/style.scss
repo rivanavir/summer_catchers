@@ -46,8 +46,8 @@ header.header{
   position: relative;
   overflow:hidden;
   height: 100vh;
-  @media(max-width:768px){
-    // height: 100vw;
+  @media (max-width: 992px) and (orientation:landscape){
+    height: 150vw;
   }
 
   .video-wrapper{
@@ -80,7 +80,7 @@ header.header{
       }
       h1.main-logo{
         position: relative;
-        top: 5.25vw;
+        top: 0;
         right: 7.85vw;
         @media(max-width: 768px){
           right: auto;
@@ -108,7 +108,7 @@ header.header{
       left: 0;
       right: 0;
       .top{
-        background: #19154c;
+        background: #0c034a;
         color:white;
         @media(min-width: 1201px){
           height: 65px;
@@ -174,7 +174,7 @@ header.header{
           height: 0;
           border-left: 50vw solid transparent;
           border-right: 50vw solid transparent;
-          border-top: 30px solid #19154c;
+          border-top: 30px solid #0c034a;
         }
       }
     }
@@ -441,6 +441,7 @@ section.video-wrap{
 section.contact-wrap{
   // min-height: 100vh;
   background: #08071b;
+  padding-top: 30px;
   @media(max-width:992px){
     padding-top: 10px;
   }
@@ -588,8 +589,4 @@ section.contact-wrap{
       right: -35px;
     }
   }
-}
-
-div#ascrail2000.nicescroll-rails.nicescroll-rails-vr{
-  z-index: -1 !important;
 }
