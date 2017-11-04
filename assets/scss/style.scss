@@ -26,20 +26,8 @@
 
 button.btn-dash-pink{
   max-width:100%;
-  width:245px;
-  font-size: 30px;
   border-radius:0;
-  border:2px dashed #f16eeb;
-  color:#f16eeb;
-  text-transform: uppercase;
   background: transparent;
-  line-height: .8;
-  font-family: 'Corbel';
-  padding: 6px 20px 2px;
-  letter-spacing:-1px;
-  span{
-    font-size: 16px;
-  }
 }
 
 header.header{
@@ -56,6 +44,7 @@ header.header{
     height: 100%;
     left:0;
     top:0;
+    background: #08071b;
     .logo-layout{
       position: absolute;
       top: 0;
@@ -105,16 +94,30 @@ header.header{
       }
     }
     .video-bottom{
-      background: #08071b;
+      background: transparent;
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 9999;
+      &.fixed{
+        @media (max-width: 992px) and (orientation:portrait){
+          position: fixed;
+          bottom:auto;
+          top: 0;
+        }
+      }
       .top{
         background: #0c034a;
         color:white;
         @media(min-width: 1201px){
           height: 65px;
+        }
+        @media(max-width:576px){
+          padding: 0 5%;
+        }
+        @media(max-width:576px) and (orientation:portrait){
+          padding: 0 15%;
         }
         >div{
           height: 100%;
@@ -125,6 +128,11 @@ header.header{
           @media(max-width:992px){
             margin: 10px 0;
             justify-content:center !important;
+          }
+          &.mobile-logo-list{
+            @media(max-width:576px){
+              padding: 0 25%;
+            }
           }
           li{
             padding: 0 20px;
@@ -205,10 +213,13 @@ header.header{
     min-width: 100%;
     min-height: calc(100% - 95px);
     @media(max-width:768px){
-      min-height: calc(100% - 215px);
+      min-height: calc(100% - 195px);
     }
-    @media(max-width:500px){
-      min-height: calc(100% - 258px);
+    @media(max-width:576px){
+      min-height: calc(100% - 191px);
+    }
+    @media (max-width: 576px) and (orientation:landscape){
+      min-height: calc(100% - 245px);
     }
   }
   video.header-video{
@@ -223,6 +234,10 @@ header.header{
     @media(max-width:1024px){
       transform:translate(-70%, -55%);
     }
+    @media (max-width: 1024px) and (orientation:landscape){
+      max-width: 150%;
+      transform:translate(-50%, -50%);
+    }
     @media (max-width: 992px) and (orientation:landscape){
       max-width: 120%;
       transform:translate(-50%, -50%);
@@ -230,6 +245,10 @@ header.header{
     @media(max-width:768px){
       max-width:300%;
       transform:translate(-70%, -50%);
+    }
+    @media (max-width: 768px) and (orientation:landscape){
+      max-width: 130%;
+      transform:translate(-50%, -50%);
     }
     @media (max-width: 576px) and (orientation:landscape){
       transform:translate(-50%, -50%);
@@ -433,9 +452,8 @@ section.video-wrap{
       }
     }
     button.btn-dash-pink{
-      font-size: 30px;
       margin: 20px 0;
-      padding: 11px 20px 7px;
+      padding: 0;
     }
 
     ul.social-list{
